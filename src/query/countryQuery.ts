@@ -1,7 +1,7 @@
-import { gql } from "graphql-tag";
+import { gql } from 'graphql-tag';
 
-import { CONTINENT_FRAGMENT } from "./continentQuery";
-import { LANGUAGE_FRAGMENT } from "./languageFragment";
+import { CONTINENT_FRAGMENT } from './continentQuery';
+import { LANGUAGE_FRAGMENT } from './languageFragment';
 
 export const COUNTRY_FRAGMENT = gql`
     ${LANGUAGE_FRAGMENT}

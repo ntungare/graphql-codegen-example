@@ -8,25 +8,27 @@
     "author": "Ninad Tungare",
     "email": "ninad.tungare@gmail.com",
     "license": "MIT",
-    "packageManager": "pnpm@10.24.0",
+    "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
     "scripts": {
         "pregraphql:codegen": "rm -rf src/generated/*",
         "graphql:codegen": "graphql-codegen --config codegen.ts",
         "codegen": "pnpm run pregraphql:codegen && pnpm run graphql:codegen",
-        "lint": "oxlint .",
-        "format": "oxfmt"
+        "lint": "oxlint --type-aware src",
+        "format": "oxfmt src",
+        "update": "sh ./update-all-dependencies.sh"
     },
     "dependencies": {
-        "@types/node": "^24.10.2",
         "graphql": "^16.12.0",
         "graphql-tag": "^2.12.6"
     },
     "devDependencies": {
         "@graphql-codegen/cli": "^6.1.0",
-        "@graphql-codegen/client-preset": "^5.2.1",
+        "@graphql-codegen/client-preset": "^5.2.2",
         "@graphql-typed-document-node/core": "^3.2.0",
-        "oxfmt": "^0.17.0",
-        "oxlint": "^1.32.0",
+        "@types/node": "^24.10.4",
+        "oxfmt": "^0.20.0",
+        "oxlint": "^1.35.0",
+        "oxlint-tsgolint": "^0.10.0",
         "ts-node-dev": "^2.0.0",
         "typescript": "5.9.3"
     }

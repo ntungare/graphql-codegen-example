@@ -1,6 +1,6 @@
-import { gql } from "graphql-tag";
+import { gql } from 'graphql-tag';
 
-import { COUNTRY_FRAGMENT } from "./countryQuery";
+import { COUNTRY_FRAGMENT } from './countryQuery';
 
 export const CONTINENT_FRAGMENT = gql`
     ${COUNTRY_FRAGMENT}
